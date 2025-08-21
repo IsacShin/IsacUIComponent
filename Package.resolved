@@ -1,0 +1,24 @@
+{
+  "originHash" : "5d66d6c0f91b04453ea5bbcb544f56af63e58438cf34c3cd0f31c4e25926fc70",
+  "pins" : [
+    {
+      "identity" : "isaccore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IsacShin/IsacCore.git",
+      "state" : {
+        "revision" : "173ce90c6209cdb0f17698695b0754c66a48b85f",
+        "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "isacfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IsacShin/IsacFoundation.git",
+      "state" : {
+        "revision" : "9e6c0d9edcbda442f5af4c480af01d0b881d4801",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
