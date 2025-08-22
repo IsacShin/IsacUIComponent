@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/IsacShin/IsacCore.git",
       "state" : {
-        "revision" : "173ce90c6209cdb0f17698695b0754c66a48b85f",
-        "version" : "0.0.1"
+        "revision" : "86363393c996243ecc93fd60b15fb086c2c92012",
+        "version" : "0.0.2"
       }
     },
     {
@@ -16,7 +16,7 @@
       "location" : "https://github.com/IsacShin/IsacFoundation.git",
       "state" : {
         "revision" : "9e6c0d9edcbda442f5af4c480af01d0b881d4801",
-        "version" : "1.0.0"
+        "version" : "0.0.1"
       }
     }
   ],
