@@ -29,7 +29,7 @@ public struct IsacImageHeaderScrollView<Content: View>: View {
     let contentView: [IsacSubView<Content>] // 스크롤뷰 아래에 표시될 콘텐츠
     var isStickyHeader: Bool // 고정 여부
     
-    init(imageUrlString: String,
+    public init(imageUrlString: String,
          placeholderImage: UIImage? = nil,
          imageHeight: CGFloat = 250,
          imageSubView: IsacSubView<Content>,
