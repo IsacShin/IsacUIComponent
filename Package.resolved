@@ -1,5 +1,5 @@
 {
-  "originHash" : "5d66d6c0f91b04453ea5bbcb544f56af63e58438cf34c3cd0f31c4e25926fc70",
+  "originHash" : "b9e882b18b21b69c8773e12bd180f407350ec42b9b69b6883a7d92543c90880e",
   "pins" : [
     {
       "identity" : "isaccore",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/IsacShin/IsacCore.git",
       "state" : {
         "revision" : "173ce90c6209cdb0f17698695b0754c66a48b85f",
-        "version" : "1.0.3"
+        "version" : "0.0.1"
       }
     },
     {
