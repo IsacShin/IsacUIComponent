@@ -20,6 +20,9 @@ public struct IsacBannerSlideView: View {
     let placeholderImage: UIImage? // 기본 이미지
     let showIndicator: Bool // 기본 인디케이터 표시 여부(커스텀 X)
     
+    /// CornerRadius 설정
+    let bannerCornerRadius: CGFloat // 배너 모서리 둥글게 설정
+    
     /// 오토 스크롤 설정
     let autoScrollEnabled: Bool // 자동 스크롤 활성화 여부
     let autoScrollInterval: TimeInterval // 3초 간격 자동 스크롤
@@ -45,6 +48,7 @@ public struct IsacBannerSlideView: View {
     public init(items: [String],
          placeholderImage: UIImage? = nil,
          showIndicator: Bool = true,
+         bannerCornerRadius: CGFloat = 12,
          autoScrollEnabled: Bool = true,
          autoScrollInterval: TimeInterval = 3.0,
          customIndicator: Bool = true,
@@ -62,6 +66,7 @@ public struct IsacBannerSlideView: View {
         self.items = items
         self.placeholderImage = placeholderImage
         self.showIndicator = showIndicator
+        self.bannerCornerRadius = bannerCornerRadius
         self.autoScrollEnabled = autoScrollEnabled
         self.autoScrollInterval = autoScrollInterval
         self.customIndicator = customIndicator
@@ -89,6 +94,8 @@ public struct IsacBannerSlideView: View {
                                 .tag(index)
                         }
                     }
+                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: bannerCornerRadius,
+                                                                   height: bannerCornerRadius)))
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: showIndicator == true ? .always : .never))
                     
                     if customIndicator {

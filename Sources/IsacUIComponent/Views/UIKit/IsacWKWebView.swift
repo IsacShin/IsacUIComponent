@@ -65,7 +65,7 @@ final class WebViewStore {
 /// }
 /// ```
 internal struct IsacWKWebView: UIViewRepresentable {
-    @Binding var url: URL
+    var url: URL
     @Binding var isLoading: Bool
     var webViewStore: WebViewStore
     var messageHandlerName: String? = nil
@@ -94,10 +94,10 @@ internal struct IsacWKWebView: UIViewRepresentable {
     
     func updateUIView(_ webView: WKWebView, context: Context) {
         // 현재 URL이 마지막으로 로드한 URL과 다를 때만 새로 로드
-        if url != lastLoadedURL {
-            let request = URLRequest(url: url)
+        if webView.url != lastLoadedURL {
+            let request = URLRequest(url: webView.url ?? url)
             webView.load(request)
-            lastLoadedURL = url
+            lastLoadedURL = webView.url
         }
     }
     

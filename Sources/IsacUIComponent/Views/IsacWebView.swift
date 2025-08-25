@@ -10,7 +10,7 @@ import WebKit
 
 @available(iOS 14.0, *)
 public struct IsacWebView: View {
-    @Binding private var url: URL
+    var url: URL
     @Binding private var isLoading: Bool
     @Binding private var canGoBack: Bool
     @Binding private var canGoForward: Bool
@@ -22,14 +22,14 @@ public struct IsacWebView: View {
     public var messageHandlerName: String? = nil
     public var onReceiveMessage: ((WKScriptMessage) -> Void)? = nil
     
-    public init(url: Binding<URL> = .constant(URL(string: "https://www.example.com")!),
+    public init(url: URL = URL(string: "https://www.apple.com")!,
         isLoading: Binding<Bool> = .constant(false),
         canGoBack: Binding<Bool> = .constant(false),
         canGoForward: Binding<Bool> = .constant(false),
         webTitle: Binding<Text?> = .constant(nil),
         messageHandlerName: String? = nil,
         onReceiveMessage: ((WKScriptMessage) -> Void)? = nil) {
-        self._url = url
+        self.url = url
         self._isLoading = isLoading
         self._canGoBack = canGoBack
         self._canGoForward = canGoForward
@@ -46,7 +46,7 @@ public struct IsacWebView: View {
                 }
                 
                 IsacWKWebView(
-                    url: $url,
+                    url: url,
                     isLoading: $isLoading,
                     webViewStore: webViewStore,
                     messageHandlerName: messageHandlerName,
@@ -70,7 +70,7 @@ public struct IsacWebView: View {
 
 @available(iOS 14.0, *)
 #Preview {
-    IsacWebView(url: .constant(URL(string: "https://www.example.com")!),
+    IsacWebView(url: URL(string: "https://www.apple.com")!,
               isLoading: .constant(false),
               canGoBack: .constant(false),
               canGoForward: .constant(false),
